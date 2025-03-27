@@ -22,19 +22,18 @@ public:
     }
     void display()
     {
-        cout<<"Name :"<<name<<endl;
-        cout<<"Rollnumber :"<<rollnumber<<endl;
-        cout<<"Age :"<<age<<endl;
+        cout << "Name :" << name << endl;
+        cout << "Rollnumber :" << rollnumber << endl;
+        cout << "Age :" << age << endl;
     }
 };
 int main()
 {
-    student takshay ,swayam;
+    student takshay, swayam;
     takshay.setname("takshay");
     takshay.setrollnumber(10);
     takshay.setage(18);
     takshay.display();
-
 
     return 0;
 }
