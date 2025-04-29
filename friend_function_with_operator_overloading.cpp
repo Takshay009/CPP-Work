@@ -10,7 +10,7 @@ class Complex
     int a, b;
 
     friend Complex operator+(Complex o1, Complex o2); // friend function declaration
-    
+
 public:
     void setNumber(int n1, int n2)
     {
@@ -18,7 +18,6 @@ public:
         b = n2;
     }
 
-    // Below line means that non member - sumComplex funtion is allowed to do anything with my private parts (members)
     void printNumber()
     {
         cout << "Your number is " << a << " + " << b << "i" << endl;
