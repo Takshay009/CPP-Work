@@ -4,7 +4,7 @@
 using namespace std;
 int main()
 {
-    ofstream file; // only declaration
+    // ofstream file; // only declaration
     ofstream file("file.txt");
     ofstream file1("file2.txt");
 

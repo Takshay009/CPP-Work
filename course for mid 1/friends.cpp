@@ -23,7 +23,13 @@ int main()
     Box obj(5.00);
     double area = calculateArea(obj);
     cout << "Area of the box is: " << area << endl;
+
+    return 0;
 }
+
+
+
+
 
 // #include <iostream>
 // using namespace std;

@@ -47,38 +47,78 @@
 
 using namespace std;
 
+// class Complex
+// {
+// private:
+//     double real;
+//     double imag;
+
+// public:
+//     Complex(int r, int i)
+//     {
+//         real = r, imag = i;
+//     }
+
+//     Complex operator-(Complex obj)
+//     {
+
+//         return Complex(real - obj.real, imag - obj.imag);
+//     }
+
+//     void display()
+//     {
+//         cout << real << " - " << imag << endl;
+//     }
+// };
+
+// int main()
+// {
+//     Complex c1(5, 2);
+//     Complex c2(2, 1);
+//     Complex c3 = c1 - c2;
+//     c1.display();
+//     c2.display();
+//     c3.display();
+
+//     return 0;
+// }
+
 class Complex
 {
-private:
-    double real;
-    double imag;
+    int a, b;
+
+    friend Complex operator+(Complex o1, Complex o2); // friend function declaration
 
 public:
-    Complex(int r, int i)
+    void setNumber(int n1, int n2)
     {
-        real = r, imag = i;
+        a = n1;
+        b = n2;
     }
 
-    Complex operator-(Complex obj)
+    void printNumber()
     {
-
-        return Complex(real - obj.real, imag - obj.imag);
-    }
-
-    void display()
-    {
-        cout << real << " - " << imag << endl;
+        cout << "Your number is " << a << " + " << b << "i" << endl;
     }
 };
+Complex operator+(Complex o1, Complex o2)
+{
+    Complex o3;
+    o3.setNumber((o1.a + o2.a), (o1.b + o2.b));  // (1+5) + (4+8)i = 6 + 12i
+    return o3;
+}
 
 int main()
 {
-    Complex c1(5, 2);
-    Complex c2(2, 1);
-    Complex c3 = c1 - c2;
-    c1.display();
-    c2.display();
-    c3.display();
-    
+    Complex c1, c2, sum;
+    c1.setNumber(1, 4);
+    c1.printNumber();
+
+    c2.setNumber(5, 8);
+    c2.printNumber();
+
+    sum = c1 + c2; // operator overloading  
+    sum.printNumber();
+
     return 0;
 }
