@@ -1,5 +1,5 @@
-#include<iostream>
-#include<stdexcept>
+#include <iostream>
+#include <stdexcept>
 
 using namespace std;
 int main()
@@ -10,14 +10,13 @@ int main()
         double amount;
         // Deposit
         cout << "Enter amount to deposit: ";
-        cin>> amount;
-        if (amount <=  0)
+        cin >> amount;
+        if (amount <= 0)
         {
-            throw invalid_argument("Deposit amount cannot be negative.");
+            throw invalid_argument("Deposit amount cannot be this.");
         }
         balance += amount;
         cout << "New balance: " << balance << endl;
-
 
 
         // Withdraw
@@ -34,10 +33,10 @@ int main()
         balance -= amount;
         cout << "New balance: " << balance << endl;
     }
-    catch(exception& e)
+    catch (exception &e)
     {
-        cout<< "Exception: " << e.what() << endl;
+        cout << "Exception: " << e.what() << endl;
     }
-    
+
     return 0;
 }
